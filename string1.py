@@ -45,8 +45,13 @@ def donuts(count):
 
 
 def both_ends(s):
-    # your code here
-    return
+    if len(s) > 2:
+        new_list = list(s)
+        del new_list[2:-2]
+        new_str = ''.join(new_list)  # converst list back to str
+        return new_str
+    else:
+        return ''
 
 
 # C. fix_start
