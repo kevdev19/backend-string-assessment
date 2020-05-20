@@ -28,8 +28,11 @@ __author__ = "Kevin Blount"
 
 
 def donuts(count):
-    # your code here
-    return
+    if count < 10:
+        new_str = "Number of donuts: " + str(count)
+    else:
+        new_str = "Number of donuts: many"
+    return new_str
 
 
 # B. both_ends
