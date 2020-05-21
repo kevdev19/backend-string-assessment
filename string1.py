@@ -69,8 +69,10 @@ def fix_start(s):
     if len(s) > 1:
         new_s = s.replace(s[0], '*')
         new_s = s[0] + new_s
+        # convert str to list
         new_list = list(new_s)
         del new_list[1]
+        # conver list back to str
         new_s = ''.join(new_list)
         return new_s
     else:
