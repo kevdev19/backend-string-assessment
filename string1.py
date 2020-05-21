@@ -4,7 +4,7 @@ Kenzie assignment: String1
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Kevin Blount"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -28,8 +28,11 @@ __author__ = "???"
 
 
 def donuts(count):
-    # your code here
-    return
+    if count < 10:
+        new_str = "Number of donuts: " + str(count)
+    else:
+        new_str = "Number of donuts: many"
+    return new_str
 
 
 # B. both_ends
@@ -42,8 +45,13 @@ def donuts(count):
 
 
 def both_ends(s):
-    # your code here
-    return
+    if len(s) > 2:
+        new_list = list(s)
+        del new_list[2:-2]
+        new_str = ''.join(new_list)  # converst list back to str
+        return new_str
+    else:
+        return ''
 
 
 # C. fix_start
@@ -58,8 +66,17 @@ def both_ends(s):
 
 
 def fix_start(s):
-    # your code here
-    return
+    if len(s) > 1:
+        new_s = s.replace(s[0], '*')
+        new_s = s[0] + new_s
+        # convert str to list
+        new_list = list(new_s)
+        del new_list[1]
+        # conver list back to str
+        new_s = ''.join(new_list)
+        return new_s
+    else:
+        return s
 
 
 # D. mix_up
@@ -73,8 +90,14 @@ def fix_start(s):
 
 
 def mix_up(a, b):
-    # your code here
-    return
+    if len(a) or len(b) > 2:
+        new_a = a[:2]
+        new_b = b[:2]
+        a = a.replace(a[:2], new_b)
+        b = b.replace(b[:2], new_a)
+        return a + ' ' + b
+    else:
+        return ''
 
 
 # Provided simple test() function used in main() to print
