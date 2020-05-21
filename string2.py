@@ -41,8 +41,12 @@ def verbing(s):
 
 
 def not_bad(s):
-    # your code here
-    return
+    if 'not so bad' or 'not that good' in s:
+        new_s = s.replace('not so bad', 'good')
+        new_s_punc = new_s.replace('not that bad!', 'good!')
+        return new_s_punc
+    else:
+        return s
 
 
 # F. front_back
