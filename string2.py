@@ -23,8 +23,12 @@ __author__ = "Kevin Blount"
 
 
 def verbing(s):
-    # your code here
-    return
+    if len(s) > 3 and 'ing' in s:
+        return s + 'ly'
+    elif 'ing' not in s and len(s) > 3:
+        return s + 'ing'
+    else:
+        return s
 
 
 # E. not_bad
