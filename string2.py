@@ -65,7 +65,7 @@ def front_back(a, b):
     elif len(a) or len(b) % 3 == 1:
         return ''
     else:
-        return 'abcxydez'
+        return ''
 
 
 # Provided simple test() function used in main() to print
