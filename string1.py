@@ -90,8 +90,14 @@ def fix_start(s):
 
 
 def mix_up(a, b):
-    # your code here
-    return
+    if len(a) or len(b) > 2:
+        new_a = a[:2]
+        new_b = b[:2]
+        a = a.replace(a[:2], new_b)
+        b = b.replace(b[:2], new_a)
+        return a + ' ' + b
+    else:
+        return ''
 
 
 # Provided simple test() function used in main() to print
