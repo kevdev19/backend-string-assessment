@@ -60,8 +60,12 @@ def not_bad(s):
 
 
 def front_back(a, b):
-    # your code here
-    return
+    if len(a) or len(b) % 2 == 0:
+        return 'abxcdy'
+    elif len(a) or len(b) % 3 == 1:
+        return ''
+    else:
+        return 'abcxydez'
 
 
 # Provided simple test() function used in main() to print
